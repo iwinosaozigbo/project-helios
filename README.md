@@ -1,3 +1,5 @@
+<img width="1730" height="909" alt="Codex Image Aug 25, 2026, 09_54_03 AM" src="https://github.com/user-attachments/assets/ced673ef-67cd-4c4b-8e04-0f3571d39a8d" />
+
 # HELIOS — Autonomous Incident Command
 
 HELIOS is an interactive incident-response simulator that turns a production outage into a visual, explainable workflow: detect the blast radius, correlate traces and deploys, review an AI-generated remediation plan, execute a safe rollback, and watch the system recover.
