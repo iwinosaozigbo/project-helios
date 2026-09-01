@@ -120,7 +120,7 @@ export default function Home() {
           </div>
 
           {tab === 'analysis' && <>
-            <div className="panel-heading intel-heading"><div><span className="kicker">HELIOS AI</span><h2>{isResolved ? 'Recovery verified' : 'Root cause analysis'}</h2></div><span className="confidence">94% CONF.</span></div>
+            <div className="panel-heading intel-heading"><div><span className="kicker">HELIOS INTEL</span><h2>{isResolved ? 'Recovery verified' : 'Root cause analysis'}</h2></div><span className="confidence">94% CONF.</span></div>
             <div className="finding">
               <span className="finding-index">01</span>
               <div><strong>{isResolved ? 'All SLOs back in policy' : 'Connection pool exhaustion'}</strong><p>{isResolved ? 'Error rate and latency returned to baseline across all downstream services.' : <>payment-router began rejecting connections 46s after deploy <code>#a82f1c</code>.</>}</p></div>
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="agents"><span>AGENT ACTIVITY</span><p><i className="violet" /> Trace agent correlated 1.8M spans <b>4.2s</b></p><p><i className="green" /> Runbook agent found safe rollback <b>2.1s</b></p><p><i className="cyan" /> Policy agent verified change window <b>0.8s</b></p></div>
           </>}
 
-          {tab === 'timeline' && <div className="timeline-view"><span className="kicker">CORRELATED EVENT STREAM</span>{activity.map((item, index) => <div className="timeline-item" key={item.time}><i className={item.tone} /><time>{item.time}</time><div><strong>{item.label}</strong><p>{item.detail}</p></div>{index === 1 && <span className="ai-tag">AI</span>}</div>)}</div>}
+          {tab === 'timeline' && <div className="timeline-view"><span className="kicker">CORRELATED EVENT STREAM</span>{activity.map((item, index) => <div className="timeline-item" key={item.time}><i className={item.tone} /><time>{item.time}</time><div><strong>{item.label}</strong><p>{item.detail}</p></div>{index === 1 && <span className="evidence-tag">CORR</span>}</div>)}</div>}
 
           {tab === 'runbook' && <div className="runbook-view"><span className="kicker">VERIFIED AUTOMATION</span><h3>Safe service rollback</h3><p>Generated from 142 previous incidents and validated against current infrastructure state.</p>{['Freeze deploy pipeline', 'Drain payment-router traffic', 'Restore version #8bd712', 'Verify golden signals'].map((step, index) => <div className="runbook-step" key={step}><span>{String(index + 1).padStart(2, '0')}</span><strong>{step}</strong><b>{index === 0 && stage !== 'detected' ? 'DONE' : 'READY'}</b></div>)}<button className="secondary-action" onClick={() => setTab('analysis')}>RETURN TO ACTION →</button></div>}
         </aside>

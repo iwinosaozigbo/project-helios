@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? 'http://localhost:3000'),
   title: 'HELIOS — Autonomous Incident Command',
   description:
-    'An AI-native command center for understanding and resolving production incidents in real time.',
+    'An evidence-driven command center for understanding and resolving production incidents in real time.',
   openGraph: {
     title: 'HELIOS — Autonomous Incident Command',
     description:
